@@ -2,6 +2,7 @@
   --padding-container: 15px;
   --value-columns: 3;
   --offset-projects: 30px;
+  --transition-time: cubic-bezier(0.4, 0, 0.2, 1);
   --main-color: #212121;
   --secondary-color: #757575;
   --head-color: #000;
@@ -72,10 +73,7 @@ body {
   display: block;
 }
 /* -----Header ----*/
-.main-page .header {
-  border-bottom: 1px solid transparent;
-}
-.page-header {
+.portfolio-page .page-header {
   border-bottom: 1px solid var(--border-header);
 }
 .header-box {
@@ -117,17 +115,34 @@ body {
 }
 /* site-nav links */
 .site-nav-link {
+  padding-left: 2px;
+  padding-right: 2px;
   color: var(--main-color);
 }
 .site-nav-link:hover,
 .site-nav-link:focus {
   color: var(--accent-color);
 }
-.site-nav > .item + .item {
+.site-nav-item + .site-nav-item {
   margin-left: 50px;
 }
+
 .site-nav-link.current {
+  position: relative;
+  overflow: hidden;
   color: var(--accent-color);
+}
+.site-nav-link.current::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: var(--accent-color);
 }
 
 /* contacts-nav */
@@ -451,10 +466,7 @@ body {
 .footer-social-icons .social-link:focus {
   background-color: var(--accent-color);
 }
-/* .footer-social-icons a:hover .social-icon,
-.footer-social-icons a:focus .social-icon {
-  background-color: var(--accent-color);
-} */
+
 /* logo */
 .footer-studio {
   color: var(--primary-white-color);
