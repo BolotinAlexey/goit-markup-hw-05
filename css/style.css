@@ -2,7 +2,8 @@
   --padding-container: 15px;
   --value-columns: 3;
   --offset-projects: 30px;
-  --transition-time: cubic-bezier(0.4, 0, 0.2, 1);
+  --time-transition: 1000ms;
+  --function-transition: cubic-bezier(0.4, 0, 0.2, 1);
   --main-color: #212121;
   --secondary-color: #757575;
   --head-color: #000;
@@ -58,6 +59,7 @@ body {
 .button {
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
+  border: none;
 }
 
 .list {
@@ -71,6 +73,9 @@ body {
 }
 .img-block {
   display: block;
+}
+
+.is-transition {
 }
 /* -----Header ----*/
 .portfolio-page .page-header {
@@ -118,6 +123,7 @@ body {
   padding-left: 2px;
   padding-right: 2px;
   color: var(--main-color);
+  transition: color var(--time-transition) var(--function-transition);
 }
 .site-nav-link:hover,
 .site-nav-link:focus {
@@ -164,6 +170,7 @@ body {
   color: var(--secondary-color);
   display: flex;
   align-items: center;
+  transition: color var(--time-transition) var(--function-transition);
 }
 
 .contacts-nav-link:hover,
@@ -320,6 +327,7 @@ body {
   gap: 10px;
   justify-content: space-between;
   color: var(--color-icons);
+  background-color: var(--primary-white-color);
 }
 .social-link {
   width: 44px;
@@ -330,6 +338,8 @@ body {
   justify-content: center;
   align-items: center;
   color: inherit;
+  transition: color var(--time-transition) var(--function-transition),
+    background-color var(--time-transition) var(--function-transition);
 }
 .social-icon {
   --color2: currentColor;
@@ -360,6 +370,7 @@ body {
   border-radius: 4px;
   border: 1px solid var(--color-icons);
   color: var(--color-icons);
+  transition: color var(--time-transition) var(--function-transition);
 }
 .client-link:hover,
 .client-link:focus {
@@ -384,6 +395,10 @@ body {
   line-height: 1.62;
   text-align: center;
   color: var(--main-color);
+  box-shadow: none;
+  transition: color var(--time-transition) var(--function-transition),
+    background-color var(--time-transition) var(--function-transition),
+    box-shadow var(--time-transition) var(--function-transition);
 }
 .filters-btn:active,
 .filters-btn:hover,
@@ -408,8 +423,8 @@ body {
   margin-top: var(--offset-projects);
   margin-left: var(--offset-projects);
 
-  box-shadow: 1px 0 var(--outline-project), -1px 0 var(--outline-project);
-  border-bottom: 1px solid var(--outline-project);
+  box-shadow: 1px 1px var(--outline-project), -1px 1px var(--outline-project);
+  transition: box-shadow var(--time-transition) var(--function-transition);
 }
 .project:hover {
   box-shadow: 3px 4px 5px 1px var(--outline-project), -3px 0 5px var(--outline-project);
@@ -483,4 +498,5 @@ body {
   display: block;
   margin-top: 9px;
   color: var(--color-address-link);
+  transition: color var(--time-transition) var(--function-transition);
 }
