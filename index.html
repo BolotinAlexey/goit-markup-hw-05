@@ -68,7 +68,7 @@
         <!-- Poster -->
         <section class="poster">
           <h1 class="poster-header">Ефективні рішення для <br />вашого бізнесу</h1>
-          <button class="button poster-btn" type="button">Замовити послугу</button>
+          <button class="button poster-btn" data-modal-open type="button">Замовити послугу</button>
         </section>
 
         <!-- Features -->
@@ -440,6 +440,17 @@
           </div>
         </div>
       </footer>
+      <!-- Modal -->
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="btn-cross button" data-modal-close type="button">
+            <svg class="icon" width="11" height="11">
+              <use href="./images/symbol-defs.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
