@@ -16,7 +16,7 @@
   --bgcolor-team: #f5f4fa;
   --bgcolor-project-overley: rgba(33, 150, 243, 0.9);
   --bgcolor-doing-description: rgba(47, 48, 58, 0.8);
-  --bgcolor-backdrop: rgba(0, 0, 0, 0.1);
+  --bgcolor-backdrop: rgba(0, 0, 0, 0.2);
   --outline-project: #eee;
   --border-header: #ececec;
   --color-icons: #afb1b8;
@@ -409,6 +409,7 @@ body {
 
 .filters-btn {
   padding: 6px 22px;
+  border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
